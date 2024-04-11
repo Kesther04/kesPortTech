@@ -1,0 +1,45 @@
+// Text Colors
+$primary-color:rgb(0, 0, 88);
+$hover-color:rgb(128, 128, 128);
+$secondary-color: #272727;
+
+// Background Colors
+
+$intro-bg:linear-gradient(to right,whitesmoke,rgb(165, 165, 165));
+$intrex-bg:rgba(10,10,88,0.2);
+$primary-bg:whitesmoke;
+$contact-bg:rgb(225, 225, 245);
+
+// Padding
+$headPad:10px 100px;
+$bodyPad:40px 100px;
+
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+} 
+
+
+@mixin media-sm {
+    @media screen and (max-width: 550px) {
+        @content;
+    }
+}
+
+
+@mixin media-md {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+
+@mixin media-lg {
+    @media screen and (max-width: 1400px) {
+        @content;
+    }
+}
