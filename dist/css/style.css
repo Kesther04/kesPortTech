@@ -451,8 +451,20 @@ footer:hover {
 .mainProjects .mainProjectsContainer .projectContent-desc {
   text-align: justify;
 }
+.mainProjects .mainProjectsContainer .projectContent-img {
+  height: 75vh;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 20px;
+}
+.mainProjects .mainProjectsContainer .projectContent-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
 .mainProjects .carousel {
-  height: 80vh;
+  height: 75vh;
   overflow: hidden;
   width: 100%;
   position: relative;

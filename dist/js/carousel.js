@@ -1,65 +1,47 @@
-let timeRunning = 1000;
-let timeAutoNext = 7000;
-let runTimeOut;
-function next(e) {
-    let nextBtn = e;
-    let carousel = e.parentElement.parentElement;
-    let listItem = e.parentElement.parentElement.children[0];
-    let thumbNail = e.parentElement.parentElement.children[2];
+let carousel = document.querySelector(".carousel");
+let listItem = document.querySelector(".carousel .list");
+let thumbNail = document.querySelector(".carousel .thumbnail");
+let nextBtn = document.getElementById("next");
+let prevBtn = document.getElementById("prev");
 
-           
-    let runAutoRun = setTimeout(()=>{
-        nextBtn.click();
-    }, timeAutoNext);
-
+nextBtn.onclick = function () {
     showSlider("next");
-    function showSlider(type){
-        let itemSlider = e.parentElement.parentElement.children[0].querySelectorAll('.item');
-        let itemThumbnail = e.parentElement.parentElement.children[2].querySelectorAll('.item');
-
-        if(type === "next"){
-            listItem.appendChild(itemSlider[0]);
-            thumbNail.appendChild(itemThumbnail[0]);
-            carousel.classList.add("next");
-        }
-
-        clearTimeout(runTimeOut);
-        runTimeOut = setTimeout(()=>{
-            carousel.classList.remove("next");
-            carousel.classList.remove("prev");
-        }, timeRunning);
-
-        clearTimeout(runAutoRun);
-        runAutoRun = setTimeout(()=>{
-            nextBtn.click();
-        }, timeAutoNext);
-    }
 }
 
-function prev(e) {
-    let prevBtn = e;
-    let carousel = e.parentElement.parentElement;
-    let listItem = e.parentElement.parentElement.children[0];
-    let thumbNail = e.parentElement.parentElement.children[2];
-
-
+prevBtn.onclick = function () {
     showSlider("prev");
-    function showSlider(type){
-        let itemSlider = e.parentElement.parentElement.children[0].querySelectorAll('.item');
-        let itemThumbnail = e.parentElement.parentElement.children[2].querySelectorAll('.item');
+}
 
-        if(type === "prev"){
-            let positionLastItem = itemSlider.length - 1;
-            listItem.prepend(itemSlider[positionLastItem]);
-            thumbNail.prepend(itemThumbnail[positionLastItem]);
-            carousel.classList.add("prev");
-        }
+let timeRunning = 3000;
+let timeAutoNext = 7000;
+let runTimeOut;
+let runAutoRun = setTimeout(()=>{
+    nextBtn.click();
+}, timeAutoNext);
 
-        clearTimeout(runTimeOut);
-        runTimeOut = setTimeout(()=>{
-            carousel.classList.remove("next");
-            carousel.classList.remove("prev");
-        }, timeRunning);
+function showSlider(type){
+    let itemSlider = listItem.querySelectorAll('.item');
+    let itemThumbnail = thumbNail.querySelectorAll('.item');
 
+    if(type === "next"){
+        listItem.appendChild(itemSlider[0]);
+        thumbNail.appendChild(itemThumbnail[0]);
+        carousel.classList.add("next");
+    }else{
+        let positionLastItem = itemSlider.length - 1;
+        listItem.prepend(itemSlider[positionLastItem]);
+        thumbNail.prepend(itemThumbnail[positionLastItem]);
+        carousel.classList.add("prev");
     }
+
+    clearTimeout(runTimeOut);
+    runTimeOut = setTimeout(()=>{
+        carousel.classList.remove("next");
+        carousel.classList.remove("prev");
+    }, timeRunning);
+
+    clearTimeout(runAutoRun);
+    runAutoRun = setTimeout(()=>{
+        nextBtn.click();
+    }, timeAutoNext);
 }
