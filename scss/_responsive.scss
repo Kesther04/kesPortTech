@@ -46,33 +46,21 @@ $bodyPad:40px 5px;
                 h1{
                     font-size: 30px;
                 }
+
+                &-img{
+                    height: 50vh;
+                    border-radius:20px;
+                }
             }
         }
 
         .carousel{
-            
-            .list{
-                height:50vh;
-                position: relative;
-
-                &-bg{
-                    inset: 0 0 230px 0;
-                }
-            }
+            height: 50vh;
         }
 
         .thumbnail{
-            bottom:0px;
-            right:0px;
-            justify-content: space-around;
-            width: 100%;
-            .item{
-                margin:0px;
-
-                img,video{
-                    object-fit: fill;
-                }
-            }
+            width:0;
+            display: none;
         }
 
         .arrows{
@@ -427,33 +415,22 @@ $bodyPad:40px 5px;
                 h1{
                     font-size: 20px;
                 }
+
+                &-img{
+                    height: 30vh;
+                    border-radius:20px;
+                }
+
             }
         }
 
         .carousel{
-            
-            .list{
-                height:40vh;
-                position: relative;
-
-                &-bg{
-                    inset: 0 0 310px 0;
-                }
-            }
+            height:40vh;
         }
 
         .thumbnail{
-            bottom:0px;
-            right:0px;
-            justify-content: space-around;
-            width: 100%;
-            .item{
-                margin:0px;
-
-                img,video{
-                    object-fit: fill;
-                }
-            }
+            width: 0;
+            display: none;
         }
 
         .arrows{

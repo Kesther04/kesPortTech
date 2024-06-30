@@ -342,10 +342,13 @@ header{
         box-shadow: 2px 3px 5px 4px rgb(216,216,216);
         width:40vw;
 
+        
+
         &-img{
             position: relative;
             overflow: hidden;    
             border-radius:10px;
+                    
             
             &::after{
                 content:'';
@@ -354,11 +357,12 @@ header{
                 left:0;
                 height:100%;
                 width:100%;
-                background:rgba(10,10,10,0.4);
+                background:$intrex-bg;
                 opacity:0;
                 transition: .3s ease-in-out;
-            }
             
+            }
+
             img{
                 width:100%;
                 border-radius:10px; 
@@ -377,10 +381,13 @@ header{
                 img{
                     transform:scale(1.35);
                 }
+                
             }
 
+            
+            
+            
 
-    
         }
 
 

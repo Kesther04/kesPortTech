@@ -304,7 +304,7 @@ header {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(10, 10, 10, 0.4);
+  background: rgba(10, 10, 88, 0.2);
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
@@ -455,13 +455,38 @@ footer:hover {
   height: 75vh;
   overflow: hidden;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 40px;
+  position: relative;
 }
-.mainProjects .mainProjectsContainer .projectContent-img img {
+.mainProjects .mainProjectsContainer .projectContent-img .img-con {
+  height: 100%;
+}
+.mainProjects .mainProjectsContainer .projectContent-img .img-con::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(10, 10, 88, 0.2);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.mainProjects .mainProjectsContainer .projectContent-img .img-con img {
   width: 100%;
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+  transition: ease-in-out 0.3s;
+}
+.mainProjects .mainProjectsContainer .projectContent-img .img-con img:hover {
+  transform: scale(1.1);
+}
+.mainProjects .mainProjectsContainer .projectContent-img .img-con:hover img {
+  transform: scale(1.1);
+}
+.mainProjects .mainProjectsContainer .projectContent-img .img-con:hover::after {
+  opacity: 1;
 }
 .mainProjects .carousel {
   height: 75vh;
@@ -628,25 +653,16 @@ footer:hover {
   .mainProjects .mainProjectsContainer .projectContent h1 {
     font-size: 30px;
   }
-  .mainProjects .carousel .list {
+  .mainProjects .mainProjectsContainer .projectContent-img {
     height: 50vh;
-    position: relative;
+    border-radius: 20px;
   }
-  .mainProjects .carousel .list-bg {
-    inset: 0 0 230px 0;
+  .mainProjects .carousel {
+    height: 50vh;
   }
   .mainProjects .thumbnail {
-    bottom: 0px;
-    right: 0px;
-    justify-content: space-around;
-    width: 100%;
-  }
-  .mainProjects .thumbnail .item {
-    margin: 0px;
-  }
-  .mainProjects .thumbnail .item img, .mainProjects .thumbnail .item video {
-    -o-object-fit: fill;
-       object-fit: fill;
+    width: 0;
+    display: none;
   }
   .mainProjects .arrows {
     top: 30vh;
@@ -912,25 +928,16 @@ footer:hover {
   .mainProjects .mainProjectsContainer .projectContent h1 {
     font-size: 20px;
   }
-  .mainProjects .carousel .list {
-    height: 40vh;
-    position: relative;
+  .mainProjects .mainProjectsContainer .projectContent-img {
+    height: 30vh;
+    border-radius: 20px;
   }
-  .mainProjects .carousel .list-bg {
-    inset: 0 0 310px 0;
+  .mainProjects .carousel {
+    height: 40vh;
   }
   .mainProjects .thumbnail {
-    bottom: 0px;
-    right: 0px;
-    justify-content: space-around;
-    width: 100%;
-  }
-  .mainProjects .thumbnail .item {
-    margin: 0px;
-  }
-  .mainProjects .thumbnail .item img, .mainProjects .thumbnail .item video {
-    -o-object-fit: fill;
-       object-fit: fill;
+    width: 0;
+    display: none;
   }
   .mainProjects .arrows {
     top: 30vh;
