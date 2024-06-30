@@ -460,6 +460,7 @@ footer:hover {
 }
 .mainProjects .mainProjectsContainer .projectContent-img .img-con {
   height: 100%;
+  width: 100%;
 }
 .mainProjects .mainProjectsContainer .projectContent-img .img-con::after {
   content: "";
