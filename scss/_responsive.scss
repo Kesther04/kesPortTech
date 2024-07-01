@@ -338,13 +338,12 @@ $bodyPad:40px 5px;
             display: flex;
             flex-direction: column;
             width: 100%;
-            justify-content: space-between;
+            justify-content: center;
         }
         &-content{
             font-size: 20px;
             padding:0px;
             width:100%;
-            line-height: 60px;
         }
 
     }
@@ -676,13 +675,12 @@ $bodyPad:40px 5px;
             display: flex;
             flex-direction: column;
             width: 100%;
-            justify-content: space-between;
         }
         &-content{
             font-size: 20px;
             padding:0px;
             width:100%;
-            line-height: 60px;
+            flex-direction: column;
         }
     }
 
