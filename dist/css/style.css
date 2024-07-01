@@ -8,10 +8,6 @@ body {
   background-color: whitesmoke;
 }
 
-ul {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
 }
@@ -48,6 +44,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.nav ul {
+  list-style: none;
 }
 .nav-menu {
   display: inline-flex;
@@ -216,6 +215,7 @@ header {
   display: none;
   margin-bottom: 10px;
   animation: moving 0.5s ease;
+  font-size: 18px;
 }
 .about-content-tab-content .content-div.active {
   display: block;
@@ -243,6 +243,9 @@ header {
 }
 .services-content h3 {
   color: rgb(0, 0, 88);
+}
+.services-content p {
+  font-size: 18px;
 }
 
 .work {
@@ -449,7 +452,8 @@ footer:hover {
   margin-top: 0px;
 }
 .mainProjects .mainProjectsContainer .projectContent-desc {
-  text-align: justify;
+  text-align: left;
+  font-size: 20px;
 }
 .mainProjects .mainProjectsContainer .projectContent-img {
   height: 75vh;
@@ -1017,6 +1021,12 @@ footer:hover {
     width: 100%;
     border-radius: 20px;
     padding: 10px;
+  }
+  .about-content-tab-content {
+    padding: 0;
+  }
+  .about-content-tab-content .content-div {
+    font-size: 15px;
   }
   .about-content-tab-head {
     position: relative;

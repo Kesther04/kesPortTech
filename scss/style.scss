@@ -10,9 +10,6 @@ body{
     background-color: $primary-bg;
 }
 
-ul{
-    list-style: none;
-}
 
 a{
     text-decoration: none;
@@ -51,6 +48,9 @@ header{
     align-items: center;
 
     
+    ul{
+        list-style: none;
+    }    
 
     &-menu{
         display: inline-flex;
@@ -243,6 +243,7 @@ header{
                     display: none;
                     margin-bottom: 10px;
                     animation: moving .5s ease;
+                    font-size: 18px;
 
                     &.active{
                         display: block;
@@ -280,6 +281,9 @@ header{
         border-radius: 10px;    
         background: white;
         box-shadow: 2px 3px 5px 4px rgb(216,216,216);
+        p{
+            font-size: 18px;
+        }
     }
 }
 

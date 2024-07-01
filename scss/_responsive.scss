@@ -532,6 +532,14 @@ $bodyPad:40px 5px;
                 width:100%;
                 border-radius:20px;
                 padding:10px;
+
+                &-content{
+                    padding:0;
+
+                    .content-div{
+                        font-size: 15px;
+                    }
+                }
     
                 &-head{
                     position: relative;
