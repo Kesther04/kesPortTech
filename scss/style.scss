@@ -409,69 +409,23 @@ header{
     h1{
         font-size: 50px;
         color: $primary-color;
+        
     }
 
     &-box{
         display: flex;
+        flex-direction: column;
         width: 100%;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
     }
     &-content{
         font-size: 20px;
         padding:20px;
-        width:40%;
         line-height: 60px;
     }
 
-    &-form{
-        padding:20px;
-        width:60%;
-        input{
-            padding:10px;
-            border-radius: 10px;
-            outline: none;
-            border: 1px solid white;
-            transition: 0.3s ease-in-out;
-            font-size: 20px;
-            width:600px;
-            box-shadow: 1px 2px 4px 1px rgb(216,216,216);
-
-            &:focus{
-                box-shadow:1px 2px 4px 1px $primary-color;
-            }
-        }
-
-        textarea{
-            padding:10px;
-            border-radius: 10px;
-            outline: none;
-            border: 1px solid white;
-            transition: 0.3s ease-in-out;
-            font-size: 20px;
-            width:600px;
-            height:400px;
-            box-shadow:1px 2px 4px 1px rgb(216,216,216);
-
-            &:focus{
-                box-shadow:1px 2px 4px 1px $primary-color;
-            }
-        }
-
-
-        button{
-            font-size: 20px;
-            color:white;
-            background: $primary-color;
-            padding:10px;
-            border-radius: 10px;
-            border:1px solid $primary-color;
-            transition: 0.3s ease-in-out;
-            
-            &:hover{
-                transform: scale(1.1);
-            }
-        }
-    }
+    
 }
 
 .social-icons{
@@ -480,6 +434,7 @@ header{
     i{
         color:$hover-color;
         padding:0 20px 0 0;
+        font-size: 50px;
 
         &:hover{
             color:$primary-color;
