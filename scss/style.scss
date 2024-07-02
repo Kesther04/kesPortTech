@@ -10,6 +10,9 @@ body{
     background-color: $primary-bg;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 a{
     text-decoration: none;
