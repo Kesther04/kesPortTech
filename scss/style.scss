@@ -160,11 +160,15 @@ header{
         line-height: 8vh;
         z-index: 7;
 
+    
                 
         #intro-stats{
             font-size: 25px;
             line-height: 1px;
         }
+
+
+       
     }
 
     &-img{
@@ -250,6 +254,35 @@ header{
 
                     &.active{
                         display: block;
+                    }
+
+                    
+
+                    .content-stack{
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-around;
+
+                        & > div{
+                            margin:10px 20px;
+                            text-align: center;
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-direction: column;
+                        }
+            
+                        img{
+                            border-radius:10px;
+                            width:100px;
+                            height:100px;
+                            transition: .1s ease-in-out;
+                            cursor: pointer;
+            
+                            &:hover{
+                                transform: translateY(-20%);
+                            }
+                        }
+                        
                     }
                 }
             }

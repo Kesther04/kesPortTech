@@ -224,6 +224,28 @@ header {
 .about-content-tab-content .content-div.active {
   display: block;
 }
+.about-content-tab-content .content-div .content-stack {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.about-content-tab-content .content-div .content-stack > div {
+  margin: 10px 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.about-content-tab-content .content-div .content-stack img {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+.about-content-tab-content .content-div .content-stack img:hover {
+  transform: translateY(-20%);
+}
 
 .services {
   width: 100%;
