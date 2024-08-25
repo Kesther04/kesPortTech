@@ -76,7 +76,7 @@ header{
     width:0;
     height:0;
     position: absolute;
-    z-index: 1;
+    z-index: 4;
     right: 1rem;
     top:1rem;
     height: 0;
@@ -305,10 +305,12 @@ header{
     
     &-box{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
 
     &-content{
+        width:30%; 
         h3{
             color:$primary-color;
         }
@@ -323,7 +325,7 @@ header{
     }
 }
 
-.work{
+.projects{
     width:100%;
     height:auto;
     padding: $bodyPad;
@@ -331,6 +333,31 @@ header{
     h1{
         font-size: 50px;
         color: $primary-color;
+    }
+
+    &-selector{
+        .btn{
+            color: black;
+            padding:10px;
+            font-size: 20px;
+            outline: none;
+            border:1px solid $primary-color;
+            background: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: .3s ease-in-out;
+
+            &.active{
+                background-color: $primary-color;
+                color:white;
+            }
+
+            &:hover{
+                background-color: $primary-color;
+                color:white;
+            }
+
+        }
     }
     
     &-box{
@@ -381,8 +408,54 @@ header{
         background: white;
         box-shadow: 2px 3px 5px 4px rgb(216,216,216);
         width:40vw;
-
         
+
+        &-txt{
+            width:100%;
+            height: 100%;
+            position: absolute;top:0;
+            visibility: hidden;
+            opacity: 0;
+            color:white;
+            z-index: 6;
+            transition: .3s ease-in-out;
+            padding:20px;
+            display: flex;
+            flex-direction: column;
+
+            p{
+                font-size: 20px;
+            }
+
+            & > div{
+                display: flex;
+                padding:10px;
+                justify-content: end;
+                button{
+                    padding: 0;
+                    border-radius: 5px;
+                    border:1px solid $primary-color;
+                    outline:none;
+                    font-size: 20px;
+                    transition: .3s ease-in-out;
+                    background-color: $primary-color;
+    
+                    a{
+                        
+                        color:white;
+                        display: block;
+                        padding:10px;
+                        font-weight: 600;
+                    }
+
+                    &:hover{
+                        transform: rotate(3deg);
+                    }
+                }
+            }
+
+            
+        }        
 
         &-img{
             position: relative;
@@ -407,7 +480,8 @@ header{
                 width:100%;
                 border-radius:10px; 
                 transition: .3s ease-in-out;
-    
+                z-index: 5;
+
                 &:hover{
                     transform:scale(1.35);
                 }
@@ -422,12 +496,13 @@ header{
                     transform:scale(1.35);
                 }
                 
+                .projects-content-txt{
+                    visibility: visible;
+                    opacity:1;
+                }
             }
 
             
-            
-            
-
         }
 
 
@@ -509,6 +584,6 @@ footer{
 }
 
 
-@import './projects';
+
 @import './responsive';
 @import './keyframes';

@@ -1,0 +1,124 @@
+{
+    "projects": [
+        {
+            "name":"House-rent",
+            "img1":"House-rent (1).png",
+            "img2":"House-rent (2).png",
+            "text":"A House Rent Management System built to handle data of tenants such as evidence of payments & receipts generation all accessible to the landlord / House Owner.",
+            "link":[
+                {
+                    "desc": "View Repository",
+                    "hlink": "https://github.com/Kesther04/HOUSE_RENT_MANAGEMENT_REPO"
+                }
+            ]
+        },
+        {
+            "name":"phone-acc",
+            "img1":"phone-acc (1).png",
+            "img2":"phone-acc (2).png",
+            "text":"A Clone of a Viable E-Commerce Website properly developed to handle user data and purchases such that it enables them to place their orders of the products available on your website.",
+            "link":[
+                {
+                    "desc": "View Repository",
+                    "hlink": "https://github.com/Kesther04/Phone_acc_repo"
+                }
+            ]
+        },
+        {
+            "name":"adverts",
+            "img1":"adverts (1).png",
+            "img2":"adverts (2).png",
+            "text":"A Full-Stack Developed System that possesses an Intuitive and User Friendly UI for advertising your products to various internet users (potential clients) in the Geo-political Zones of Nigeria allowing them to gain viable access to your services/products.",
+            "link":[
+                {
+                    "desc": "View Repository",
+                    "hlink": "https://github.com/Kesther04/buy_sell_ad_repo"
+                }
+            ]
+        },
+        {
+            "name":"exam",
+            "img1":"exam (1).png",
+            "img2":"exam (2).png",
+            "text":"",
+            "link":[
+                {
+                    "desc": "View Repository",
+                    "hlink": ""
+                }
+            ]
+        },
+        {
+            "name":"blog",
+            "img1":"blog (1).png",
+            "img2":"blog (2).png",
+            "text":"",
+            "link":[
+                {
+                    "desc": "View Repository",
+                    "hlink": ""
+                }
+            ]
+        },
+        {
+            "name":"recruit",
+            "img1":"recruit (1).png",
+            "img2":"recruit (2).png",
+            "text":"",
+            "link":[
+                {
+                    "desc": "View Repository",
+                    "hlink": ""
+                }
+            ]
+        },
+        {
+            "name":"roof-sheet",
+            "img1":"roof-sheet (1).png",
+            "img2":"roof-sheet (2).png",
+            "text":"",
+            "link":[
+                {
+                    "desc": "View Repository",
+                    "hlink": ""
+                }
+            ]
+        },
+        {
+            "name":"sales",
+            "img1":"sales (1).png",
+            "img2":"sales (2).png",
+            "text":"",
+            "link":[
+                {
+                    "desc": "View Repository",
+                    "hlink": ""
+                }
+            ]
+        },
+        {
+            "name":"school",
+            "img1":"school (1).png",
+            "img2":"school (2).png",
+            "text":"A School Portal Created to handle Student Data such as Student Credentials & Registration, Student Scratch Card, Result Upload and Management using a very responsive Web UI.",
+            "link":[
+                {
+                    "desc": "View Repository",
+                    "hlink": "https://github.com/Kesther04/SCHOOL_MGT_REPO"
+                }
+            ]
+        },
+        {
+            "name":"stud-add",
+            "img1":"stud-add (1).png",
+            "img2":"stud-add (2).png",
+            "text":"A System designed for managing the day-to-day Attendance of University Students to their various Classes for different courses according to their specific departments and faculties.",
+            "link":[
+                {
+                    "desc": "View Repository",
+                    "hlink": "https://github.com/Kesther04/STUDENT_ATTENDANCE_REPO"
+                }
+            ]
+        }
+    ]
+}

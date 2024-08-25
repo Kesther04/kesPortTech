@@ -9,7 +9,7 @@ $bodyPad:40px 5px;
         }
     }
 
-    .work{
+    .projects{
         &-box{
             flex-wrap:nowrap;
             flex-direction: column;
@@ -22,44 +22,6 @@ $bodyPad:40px 5px;
         display: flex;
         padding: $headPad;
     }
-
-    .mainProjects{
-        padding: $bodyPad;
-
-        .mainProjectsContainer{
-            padding: $bodyPad;
-
-            .projectContent{
-
-                h1{
-                    font-size: 30px;
-                }
-
-                &-img{
-                    height: 50vh;
-                    border-radius:20px;
-                }
-            }
-        }
-
-        .carousel{
-            height: 50vh;
-        }
-
-        .thumbnail{
-            width:0;
-            display: none;
-        }
-
-        .arrows{
-            top:30vh;
-            button{
-                width:40px;
-                height:40px;
-            }
-        }
-    }
-
 
     .logo{
         border-radius: 100%;
@@ -225,7 +187,7 @@ $bodyPad:40px 5px;
     }
 
         
-    .work{
+    .projects{
         width:100%;
         height:auto;
         padding: $bodyPad;
@@ -358,44 +320,6 @@ $bodyPad:40px 5px;
     header{
         display: flex;
         padding: $headPad;
-    }
-
-    .mainProjects{
-        padding: $bodyPad;
-
-        .mainProjectsContainer{
-            padding: $bodyPad;
-
-            .projectContent{
-
-                h1{
-                    font-size: 20px;
-                }
-
-                &-img{
-                    height: 30vh;
-                    border-radius:20px;
-                }
-
-            }
-        }
-
-        .carousel{
-            height:40vh;
-        }
-
-        .thumbnail{
-            width: 0;
-            display: none;
-        }
-
-        .arrows{
-            top:30vh;
-            button{
-                width:40px;
-                height:40px;
-            }
-        }
     }
 
     .logo{
@@ -562,7 +486,7 @@ $bodyPad:40px 5px;
     }
 
         
-    .work{
+    .projects{
         width:100%;
         height:auto;
         padding: $bodyPad;
