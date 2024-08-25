@@ -13,23 +13,23 @@ btns.forEach(btn => btn.addEventListener('click',(e)=>{
     
     if (e.target.value == "tech") {
         //to fetch data from tech.json    
-        fetchedData('./dist/js/json/tech.json');
+        fetchedData('./dist/js/json/tech.json','tech');
     }
     else if (e.target.value == "copy") {
 
         // to fetch data from copy.json
-        fetchedData('./dist/js/json/copy.json');
+        fetchedData('./dist/js/json/copy.json','copy');
     }
     
 }));
 
 // page onload handler
 window.onload = () => {
-    fetchedData('./dist/js/json/tech.json');
+    fetchedData('./dist/js/json/tech.json','tech');
 }
 
 // Function for Fetching Data
-const fetchedData = (link) => {
+const fetchedData = (link,type) => {
     fetch(link).then(response => response.json()).then(
         (data) => {
 
@@ -61,10 +61,20 @@ const fetchedData = (link) => {
                         contentImg.setAttribute('class','projects-content-img');
                         
                         let img = document.createElement('img');
-                        let imgItem = [item.img1,item.img2];
-                        let imgRand = Math.floor(Math.random()*2);
+                        let imgItem = [];
+                        for (let i = 0; i < item.img.length; i++) {
+                            imgItem.push(item.img[i]);                        
+                        }
 
-                        img.setAttribute('src',`./dist/img/${imgItem[imgRand]}`);
+                        let imgRand = Math.floor(Math.random()*item.img.length);
+
+                        if (type == "tech") {
+                            img.setAttribute('src',`./dist/img/codeImg/${imgItem[imgRand]}`);    
+                        }else if (type == "copy") {
+                            img.setAttribute('src',`./dist/img/copyImg/${imgItem[imgRand]}`);
+                        }
+
+                        
                         img.setAttribute('alt',`${item.name}`);
 
                         let contentDiv = document.createElement('div');
@@ -77,7 +87,6 @@ const fetchedData = (link) => {
 
                         let linkHolder = document.createElement('div');
                         
-
                         item.link.map((link) => {
                             let contentDivBtn = document.createElement('button');
                             let contentDivA = document.createElement('a');
@@ -101,5 +110,3 @@ const fetchedData = (link) => {
         }
     );
 }
-    
-   
