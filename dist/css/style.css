@@ -427,6 +427,10 @@ header {
 }
 .contact-content-div span {
   color: rgb(0, 0, 88);
+  transition: 0.3s ease-in-out;
+}
+.contact-content-div span:hover {
+  text-decoration: underline;
 }
 
 .social-icons {
