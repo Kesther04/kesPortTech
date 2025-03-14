@@ -142,13 +142,34 @@ header {
   width: auto;
   height: 45vh;
   color: rgb(0, 0, 88);
-  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   line-height: 8vh;
   z-index: 7;
 }
-.intro-content #intro-stats {
+.intro-content #intro-nm {
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.intro-content #intro-nm #intro-stats {
   font-size: 25px;
-  line-height: 1px;
+  font-style: italic;
+}
+.intro-content #intro-btn button {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 25px;
+  outline: none;
+  border: 0px solid rgb(0, 0, 88);
+  background: rgb(0, 0, 88);
+  color: white;
+  transition: 0.7s ease-in-out;
+  font-style: italic;
+}
+.intro-content #intro-btn button:hover {
+  background: rgb(25, 52, 151);
 }
 .intro-img {
   width: 40vw;
@@ -173,6 +194,7 @@ header {
 .about-content p {
   font-size: 25px;
   line-height: 5vh;
+  font-style: italic;
 }
 .about-content-tab {
   width: 100%;
@@ -228,6 +250,8 @@ header {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  background-color: white;
+  border-radius: 5px;
 }
 .about-content-tab-content .content-div .content-stack > div {
   margin: 10px 20px;
@@ -268,6 +292,9 @@ header {
   border-radius: 10px;
   background: white;
   box-shadow: 2px 3px 5px 4px rgb(216, 216, 216);
+}
+.services-content img {
+  border-radius: 5px;
 }
 .services-content h3 {
   color: rgb(0, 0, 88);
@@ -545,12 +572,16 @@ footer:hover {
     padding: 40px 5px;
   }
   .intro-content {
-    font-size: 40px;
     line-height: 6vh;
   }
-  .intro-content #intro-stats {
+  .intro-content #intro-nm {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .intro-content #intro-nm #intro-stats {
     font-size: 20px;
-    line-height: 1px;
+    font-style: italic;
   }
   .intro-img {
     width: 70vw;
@@ -722,12 +753,16 @@ footer:hover {
     padding: 40px 5px;
   }
   .intro-content {
-    font-size: 40px;
     line-height: 6vh;
   }
-  .intro-content #intro-stats {
+  .intro-content #intro-nm {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .intro-content #intro-nm #intro-stats {
     font-size: 20px;
-    line-height: 1px;
+    font-style: italic;
   }
   .intro-img {
     width: 100%;

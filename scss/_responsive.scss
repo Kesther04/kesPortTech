@@ -108,11 +108,16 @@ $bodyPad:40px 5px;
         padding:$bodyPad;
 
         &-content{
-            font-size: 40px;
             line-height: 6vh;
-            #intro-stats{
-                font-size: 20px;
-                line-height: 1px;
+            #intro-nm{
+                font-size:40px;
+                display: flex;
+                flex-direction: column;
+            
+                #intro-stats{
+                    font-size: 20px;
+                    font-style: italic;
+                }
             }
         }
 
@@ -350,11 +355,16 @@ $bodyPad:40px 5px;
         padding:$bodyPad;
 
         &-content{
-            font-size: 40px;
             line-height: 6vh;
-            #intro-stats{
-                font-size: 20px;
-                line-height: 1px;
+            #intro-nm{
+                font-size:40px;
+                display: flex;
+                flex-direction: column;
+            
+                #intro-stats{
+                    font-size: 20px;
+                    font-style: italic;
+                }
             }
         }
 

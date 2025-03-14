@@ -156,15 +156,47 @@ header{
         width:auto;
         height: 45vh;
         color:$primary-color;
-        font-size:50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         line-height: 8vh;
         z-index: 7;
+        
 
     
+        
+
+        #intro-nm{
+            font-size:50px;
+            display: flex;
+            flex-direction: column;
+        
+            #intro-stats{
+                font-size: 25px;
+                font-style: italic;
+            }
+        }
                 
-        #intro-stats{
-            font-size: 25px;
-            line-height: 1px;
+        
+
+        #intro-btn{
+            
+
+            button{
+                padding:10px;
+                border-radius: 5px;
+                font-size: 25px;
+                outline: none;
+                border:0px solid $primary-color;
+                background: $primary-color;
+                color:white;
+                transition: .7s ease-in-out;
+                font-style: italic;
+
+                &:hover{
+                    background: $sec-prime-color;
+                }
+            }
         }
 
 
@@ -196,12 +228,14 @@ header{
         p{
             font-size: 25px;
             line-height: 5vh;
+            font-style: italic;
         }
 
         &-tab{
             width:100%;
             background: white;
             box-shadow: 2px 3px 5px 4px rgb(216,216,216);
+            // box-shadow: 2px 3px 5px 4px rgb(39,39, 39);
             border-radius:20px;
             padding:20px;
 
@@ -251,6 +285,7 @@ header{
                     margin-bottom: 10px;
                     animation: moving .5s ease;
                     font-size: 18px;
+                    
 
                     &.active{
                         display: block;
@@ -262,6 +297,8 @@ header{
                         display: flex;
                         width: 100%;
                         justify-content: space-around;
+                        background-color: white;
+                        border-radius: 5px;
 
                         & > div{
                             margin:10px 20px;
@@ -310,6 +347,10 @@ header{
 
     &-content{
         width:30%; 
+        img{
+            border-radius: 5px;
+        }
+
         h3{
             color:$primary-color;
         }
@@ -318,6 +359,7 @@ header{
         border-radius: 10px;    
         background: white;
         box-shadow: 2px 3px 5px 4px rgb(216,216,216);
+        // box-shadow: 2px 3px 5px 4px rgb(39,39,39);
         p{
             font-size: 18px;
         }

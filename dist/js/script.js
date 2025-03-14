@@ -43,3 +43,8 @@ anchor.addEventListener('click',(element)=>{
     }
     
 });
+
+// for Footer Content
+let footer = document.querySelector('footer');
+let footDate = new Date().getFullYear();
+footer.innerHTML = `&copy; Copyright ${footDate}`;
