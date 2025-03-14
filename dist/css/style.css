@@ -64,6 +64,48 @@ header {
   color: rgb(0, 0, 88);
   font-weight: bold;
   font-size: 18px;
+  position: relative;
+}
+.nav-menu-list a::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 0, 88);
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  transition: 0.3s ease-in-out;
+}
+.nav-menu-list a::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 0, 88);
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  transition: 0.3s ease-in-out;
+}
+.nav-menu-list a:hover::before, .nav-menu-list a:hover::after {
+  width: 50%;
+}
+
+.theme {
+  border-radius: 50%;
+  background-color: whitesmoke;
+  cursor: pointer;
+  z-index: 4;
+  transition: 0.3s ease-in-out;
+}
+.theme:hover {
+  transform: scale(1.05);
+}
+.theme-mode {
+  display: flex;
+  padding: 5px;
+}
+.theme-mode.active {
+  display: none;
 }
 
 .menu-btn {
@@ -73,8 +115,6 @@ header {
   z-index: 4;
   right: 1rem;
   top: 1rem;
-  height: 0;
-  width: 0;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   visibility: hidden;
