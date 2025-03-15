@@ -16,7 +16,7 @@ function moveLine(target) {
 }
 
 tabs.forEach((tab,index)=>{
-    tab.addEventListener('click', (e)=>{
+    tab.addEventListener('click', ()=>{
         tabs.forEach(tab=>{tab.classList.remove('active')});
         var err = tab.classList.add('active');
         moveLine(tab);
@@ -31,3 +31,26 @@ tabs.forEach((tab,index)=>{
 
 // Initially move the line to the first link
 moveLine(document.querySelector('.tab-btn.active'));
+
+
+// for theme handler
+let themeMode = document.querySelectorAll(".theme-mode");
+
+themeMode.forEach((mode) => {
+    mode.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+            
+        themeMode.forEach(mode=>mode.classList.remove("active"));
+        mode.classList.add("active");
+    
+        document.documentElement.setAttribute("data-theme",newTheme);
+        localStorage.setItem("Theme",newTheme);
+    });
+})
+
+// Apply saved theme on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme",savedTheme);
+});

@@ -34,14 +34,19 @@ function toggleMenu() {
 }
 
 //for Scrollable Events
-let anchor = document.querySelector('a');
-anchor.addEventListener('click',(element)=>{
-    let href = element.target.getAttribute('href');
-    if (href.charAt(0) ===  "#") {
-        let ehref = document.querySelector(href);
-        ehref.scrollIntoView({behavior: 'smooth',block: 'start'});    
-    }
+let anchors = document.querySelectorAll('.nav-menu-list a');
+anchors.forEach(anchor => {
     
+    anchor.addEventListener('click',(element)=>{
+    let href = element.target.getAttribute('href');
+        if (href.charAt(0) ===  "#") {
+            anchors.forEach(mla => mla.classList.remove('current'));
+            console.log(element.target);
+            element.target.classList.add('current');
+            let ehref = document.querySelector(href);
+            ehref.scrollIntoView({behavior: 'smooth',block: 'start'});    
+        }
+    });
 });
 
 // for Footer Content

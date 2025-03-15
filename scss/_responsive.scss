@@ -39,6 +39,7 @@ $bodyPad:40px 5px;
 @include media-md {
     header{
         display: flex;
+        // justify-content: space-around;
         padding: $headPad;
     }
 
@@ -57,13 +58,14 @@ $bodyPad:40px 5px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $primary-bg;
+        background-color: var(--primary-bg);
         position: absolute;
         visibility: hidden;
 
         &.open {
             visibility: visible;
             height:400px;
+            z-index: 4;
             width:100%;
         }
 
@@ -97,6 +99,10 @@ $bodyPad:40px 5px;
         }
     }
 
+    .theme{
+        position: absolute;
+        right: 150px;
+    }
 
     .menu-btn{
         visibility: visible;
@@ -168,7 +174,6 @@ $bodyPad:40px 5px;
                         left:5px;
                         width: 50px;
                         height: 5px;
-                        background-color:navy;
                         border-radius:14px ;
                         transition: all .3s ease-in-out;
                     }
@@ -304,7 +309,7 @@ $bodyPad:40px 5px;
     }
 
     .nav{
-        background-color: $primary-bg;
+        background-color: var(--primary-bg);
         position: absolute;
         visibility: hidden;
 
@@ -428,7 +433,6 @@ $bodyPad:40px 5px;
                         left:5px;
                         width: 50px;
                         height: 5px;
-                        background-color:navy;
                         border-radius:14px ;
                         transition: all .3s ease-in-out;
                     }

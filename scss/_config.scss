@@ -1,30 +1,48 @@
 // Text Colors
-$primary-color:rgb(0, 0, 88);
-// $primary-color: rgb(25, 52, 151);
+
 $sec-prime-color:rgb(25, 52, 151);
 $hover-color:rgb(128, 128, 128);
 $secondary-color: #272727;
 
 // Background Colors
 
-$intro-bg:linear-gradient(to right,whitesmoke,rgb(165, 165, 165));
+
+
 $intrex-bg:rgba(10,10,88,0.8);
-$primary-bg:whitesmoke;
-// $primary-bg:rgb(10,10,10);
-$contact-bg:rgb(225, 225, 245);
+
+//Shadow
+
+// line-color
+
+
+:root {
+    --primary-color:rgb(0, 0, 88);
+    --norm-cl: black;
+    --intro-bg:linear-gradient(to right,whitesmoke,rgb(165, 165, 165));
+    --introfd-bg: linear-gradient(to right,whitesmoke, rgba(100,100,100,0.4));
+    --primary-bg:whitesmoke;
+    --contact-bg:rgb(225, 225, 245);
+    --norm-bg:white;
+    --bx-shadow: rgb(216,216,216);
+    --line: rgb(229,229,255);
+};
+
+
+[data-theme="dark"] {
+    --primary-color: rgb(0, 0, 167);
+    --norm-cl: white;
+    --intro-bg:linear-gradient(to right, rgb(10,10,10), rgb(90,90,90));
+    --introfd-bg: linear-gradient(to right, rgb(10,10,10), rgba(50,50,50,0.4));
+    --primary-bg:rgb(10, 10, 10);
+    --contact-bg:rgb(30,30,45);
+    --norm-bg:black;
+    --bx-shadow: rgb(39,39,39);
+    --line: rgb(26,26,0);
+};
 
 // Padding
 $headPad:10px 100px;
 $bodyPad:40px 100px;
-
-
-@function set-text-color($color) {
-    @if (lightness($color) > 40%) {
-        @return #000;
-    } @else {
-        @return #fff;
-    }
-} 
 
 
 @mixin media-sm {
