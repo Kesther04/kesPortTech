@@ -326,7 +326,7 @@ header {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  background-color: white;
+  color: var(--norm-cl);
   border-radius: 5px;
 }
 .about-content-tab-content .content-div .content-stack > div {
