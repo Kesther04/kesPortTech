@@ -324,6 +324,7 @@ header {
 }
 .about-content-tab-content .content-div .content-stack {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-around;
   color: var(--norm-cl);
