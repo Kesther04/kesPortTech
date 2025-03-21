@@ -262,6 +262,9 @@ header {
 .about {
   padding: 40px 100px;
 }
+.about.show {
+  animation: move-down 0.5s ease-in;
+}
 .about-content h1 {
   font-size: 50px;
   color: var(--primary-color);
@@ -356,6 +359,9 @@ header {
   height: auto;
   padding: 40px 100px;
 }
+.services.show {
+  animation: move-up 0.5s ease-in;
+}
 .services h1 {
   font-size: 50px;
   color: var(--primary-color);
@@ -388,10 +394,8 @@ header {
   width: 100%;
   height: auto;
   padding: 40px 100px;
-  opacity: 0;
 }
 .projects.show {
-  opacity: 1;
   animation: move-up 0.5s ease-in;
 }
 .projects h1 {
@@ -514,10 +518,8 @@ header {
   width: 100%;
   padding: 40px 100px;
   background: var(--contact-bg);
-  opacity: 0;
 }
 .contact.show {
-  opacity: 1;
   animation: move-up 0.5s ease-in;
 }
 .contact h1 {
@@ -1045,10 +1047,20 @@ footer:hover {
     transform: translateX(0);
   }
 }
+@keyframes move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes move-up {
   0% {
     opacity: 0;
-    transform: translateY(10%);
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;

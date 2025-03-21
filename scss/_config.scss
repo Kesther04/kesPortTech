@@ -45,19 +45,17 @@ $headPad:10px 100px;
 $bodyPad:40px 100px;
 
 
-// @mixin move-down{
-//     opacity: 0;
-//     &.show{
-//         opacity: 1;
-//         animation:move-down .5s ease-in;
-//     }
-// }
+@mixin move-down{
+    
+    &.show{    
+        animation:move-down .5s ease-in;
+    }
+}
 
 
 @mixin move-up{
-    opacity: 0;
+    
     &.show{
-        opacity: 1;
         animation:move-up .5s ease-in;
     }
 }
