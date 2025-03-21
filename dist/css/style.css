@@ -55,6 +55,7 @@ header {
   top: 0;
   box-shadow: 3px 1px 5px 2px var(--bx-shadow);
   z-index: 10;
+  animation: header 0.5s ease-in;
 }
 
 .logo {
@@ -218,6 +219,7 @@ header {
   justify-content: space-between;
   line-height: 8vh;
   z-index: 7;
+  animation: bgContent 0.5s ease-in 0.1s;
 }
 .intro-content #intro-nm {
   font-size: 50px;
@@ -249,6 +251,7 @@ header {
   position: absolute;
   bottom: 0;
   right: 0;
+  animation: bgImg 0.5s ease-in 0.2s;
 }
 .intro-img img {
   width: 100%;
@@ -258,6 +261,11 @@ header {
 
 .about {
   padding: 40px 100px;
+  opacity: 0;
+}
+.about.show {
+  opacity: 1;
+  animation: move-down 0.5s ease-in;
 }
 .about-content h1 {
   font-size: 50px;
@@ -352,6 +360,11 @@ header {
   width: 100%;
   height: auto;
   padding: 40px 100px;
+  opacity: 0;
+}
+.services.show {
+  opacity: 1;
+  animation: move-down 0.5s ease-in;
 }
 .services h1 {
   font-size: 50px;
@@ -385,6 +398,11 @@ header {
   width: 100%;
   height: auto;
   padding: 40px 100px;
+  opacity: 0;
+}
+.projects.show {
+  opacity: 1;
+  animation: move-up 0.5s ease-in;
 }
 .projects h1 {
   font-size: 50px;
@@ -506,6 +524,11 @@ header {
   width: 100%;
   padding: 40px 100px;
   background: var(--contact-bg);
+  opacity: 0;
+}
+.contact.show {
+  opacity: 1;
+  animation: move-up 0.5s ease-in;
 }
 .contact h1 {
   font-size: 50px;
@@ -996,5 +1019,59 @@ footer:hover {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@keyframes header {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bgImg {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes bgContent {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes move-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -35,12 +35,14 @@ header{
     position: fixed;top:0;
     box-shadow: 3px 1px 5px 2px var(--bx-shadow);
     z-index: 10;
+    animation: header .5s ease-in ;
 }
 
 .logo{
     border-radius: 100%;
     width:4vw;
     height:8vh;
+    
     img{
         width:100%;
         height: 100%;
@@ -52,7 +54,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 
     
     ul{
@@ -112,6 +114,8 @@ header{
         }
     }
 }
+
+// @include navLoader;
 
 
 .theme{
@@ -229,7 +233,7 @@ header{
         justify-content: space-between;
         line-height: 8vh;
         z-index: 7;
-        
+        animation: bgContent .5s ease-in .1s;
 
     
         
@@ -277,6 +281,7 @@ header{
         height:100vh;
         // height: 80%;
         position: absolute;bottom:0;right:0;
+        animation: bgImg .5s ease-in .2s;
         img{
             width:100%;
             height: 100%;
@@ -287,6 +292,7 @@ header{
 
 .about{
     padding:$bodyPad;  
+    @include move-down;
 
     &-content{
         h1{
@@ -408,6 +414,7 @@ header{
     width:100%;
     height:auto;
     padding: $bodyPad;
+    @include move-down;
 
     h1{
         font-size: 50px;
@@ -446,6 +453,7 @@ header{
     width:100%;
     height:auto;
     padding: $bodyPad;
+    @include move-up;
 
     h1{
         font-size: 50px;
@@ -604,6 +612,7 @@ header{
     width: 100%;
     padding: $bodyPad;
     background: var(--contact-bg);
+    @include move-up;
 
     h1{
         font-size: 50px;

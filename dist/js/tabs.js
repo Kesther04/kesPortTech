@@ -54,3 +54,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme") || "light";
     document.documentElement.setAttribute("data-theme",savedTheme);
 });
+
+
+// intersection observer API
+let about = document.querySelector(".about");
+let services = document.querySelector(".services");
+let projects = document.querySelector(".projects");
+let contact = document.querySelector(".contact");
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    })
+}, {threshold: 0.5});
+observer.observe(about);
+observer.observe(services);
+observer.observe(projects);
+observer.observe(contact);
