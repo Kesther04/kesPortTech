@@ -360,7 +360,7 @@ header {
   padding: 40px 100px;
 }
 .services.show {
-  animation: move-up 0.5s ease-in;
+  animation: move-down 0.5s ease-in;
 }
 .services h1 {
   font-size: 50px;
