@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // intersection observer API
-let about = document.querySelector(".about");
-let services = document.querySelector(".services");
+// let about = document.querySelector(".about");
+// let services = document.querySelector(".services");
 let projects = document.querySelector(".projects");
 let contact = document.querySelector(".contact");
 let observer = new IntersectionObserver((entries) => {
@@ -68,7 +68,5 @@ let observer = new IntersectionObserver((entries) => {
         }
     })
 }, {threshold: 0.5});
-observer.observe(about);
-observer.observe(services);
 observer.observe(projects);
 observer.observe(contact);
