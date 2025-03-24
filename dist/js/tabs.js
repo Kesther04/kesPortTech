@@ -35,6 +35,7 @@ moveLine(document.querySelector('.tab-btn.active'));
 
 // for theme handler
 let themeMode = document.querySelectorAll(".theme-mode");
+let logo = document.querySelector(".logo img");
 
 themeMode.forEach((mode) => {
     mode.addEventListener("click", () => {
@@ -43,6 +44,12 @@ themeMode.forEach((mode) => {
             
         themeMode.forEach(mode=>mode.classList.remove("active"));
         mode.classList.add("active");
+
+        if (newTheme == "dark") {
+            logo.setAttribute("src","dist/img/Dark_BrandLogo.png");
+        }else{
+            logo.setAttribute("src","dist/img/Light_BrandLogo.png");
+        }
     
         document.documentElement.setAttribute("data-theme",newTheme);
         localStorage.setItem("Theme",newTheme);
