@@ -49,6 +49,17 @@ anchors.forEach(anchor => {
     });
 });
 
+// for downloading CV
+let dlCV = document.querySelector('#downloadCV');
+dlCV.addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.href = './CV.html';
+    link.download = './Kesther_ogbu_cv.html';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
 // for Footer Content
 let footer = document.querySelector('footer');
 let footDate = new Date().getFullYear();

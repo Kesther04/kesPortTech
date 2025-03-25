@@ -1,0 +1,52 @@
+
+.cv{
+    &Body{
+        background-color: white;
+        padding:0 120px;
+
+        a{
+            text-decoration: underline;
+        }
+    }
+
+    &-about{
+        text-align: center;
+    }
+
+    &-skills{
+        
+        h1{
+            text-align: center;
+        }
+
+        ul{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap:20px;
+
+            li{
+                // border:1px solid black;               
+                padding: 40px 20px;
+            }
+        }
+    }
+
+    &-projects{
+        h1{
+            text-align: center;
+        }
+
+    }
+
+    &-edn{
+
+        h1{
+            text-align: center;
+        }
+
+        p{
+            // font-weight: bold;
+            text-align: center;
+        }
+    }
+}
