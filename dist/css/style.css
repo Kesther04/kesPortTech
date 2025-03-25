@@ -583,37 +583,6 @@ footer:hover {
   color: var(--primary-color);
 }
 
-.cvBody {
-  background-color: white;
-  padding: 0 120px;
-}
-.cvBody a {
-  text-decoration: underline;
-}
-.cv-about {
-  text-align: center;
-}
-.cv-skills h1 {
-  text-align: center;
-}
-.cv-skills ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-.cv-skills ul li {
-  padding: 40px 20px;
-}
-.cv-projects h1 {
-  text-align: center;
-}
-.cv-edn h1 {
-  text-align: center;
-}
-.cv-edn p {
-  text-align: center;
-}
-
 @media screen and (max-width: 1400px) {
   .services-content {
     margin: 10px;

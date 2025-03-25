@@ -53,8 +53,8 @@ anchors.forEach(anchor => {
 let dlCV = document.querySelector('#downloadCV');
 dlCV.addEventListener('click', () => {
     const link = document.createElement('a');
-    link.href = './CV.html';
-    link.download = './Kesther_ogbu_cv.html';
+    link.href = './CV.docx';
+    link.download = './Kesther_ogbu_cv.docx';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
