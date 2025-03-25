@@ -37,13 +37,11 @@ moveLine(document.querySelector('.tab-btn.active'));
 let themeMode = document.querySelectorAll(".theme-mode");
 let logo = document.querySelector(".logo img");
 
-themeMode.forEach((mode) => {
+
+themeMode.forEach((mode,index) => {
     mode.addEventListener("click", () => {
         const currentTheme = document.documentElement.getAttribute("data-theme");
         const newTheme = currentTheme === "dark" ? "light" : "dark";
-            
-        themeMode.forEach(mode=>mode.classList.remove("active"));
-        mode.classList.add("active");
 
         if (newTheme == "dark") {
             logo.setAttribute("src","dist/img/Dark_BrandLogo.png");
@@ -53,20 +51,30 @@ themeMode.forEach((mode) => {
     
         document.documentElement.setAttribute("data-theme",newTheme);
         localStorage.setItem("Theme",newTheme);
+
+        themeMode.forEach(mode=>mode.classList.remove("active"));
+        mode.classList.add("active");
+
+        localStorage.setItem("ThemeIndex", index);
     });
 })
 
 // Apply saved theme on page load
 document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("Theme") || "light";
+    const savedThemeIndex = localStorage.getItem("ThemeIndex");
     document.documentElement.setAttribute("data-theme",savedTheme);
-    themeMode.forEach( (mode)=>{
-        if (mode.classList == "theme-mode active") {
+
+    if (savedThemeIndex) {
+        themeMode.forEach((mode,index) => {
             mode.classList.remove("active");
-        }else{
-            mode.classList.add("active");
-        }
-    });
+    
+            if (index == parseInt(savedThemeIndex)) {
+                mode.classList.add("active");
+            }
+        })    
+    }
+    
 });
 
 
