@@ -58,8 +58,15 @@ themeMode.forEach((mode) => {
 
 // Apply saved theme on page load
 document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme") || "light";
+    const savedTheme = localStorage.getItem("Theme") || "light";
     document.documentElement.setAttribute("data-theme",savedTheme);
+    themeMode.forEach( (mode)=>{
+        if (mode.classList == "theme-mode active") {
+            mode.classList.remove("active");
+        }else{
+            mode.classList.add("active");
+        }
+    });
 });
 
 
