@@ -2,7 +2,8 @@
 
 *{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
+
     // color: black;
 }
 
@@ -125,7 +126,8 @@ header{
     cursor: pointer;
     z-index: 3;
     width:60px;
-    height:8vh;
+    height:6vh;
+    margin:5px 0px;
     transition: .3s ease-in-out;  
     background-color: whitesmoke;
     display: flex;
@@ -144,6 +146,10 @@ header{
         &.active{
             display: none;
             
+        }
+
+        & > i{
+            font-size: 40px;
         }
     }
 }
@@ -236,7 +242,6 @@ header{
         line-height: 8vh;
         z-index: 7;
         animation: bgContent .5s ease-in .1s;
-
     
         
 
@@ -281,9 +286,9 @@ header{
     &-img{
         width:40vw;
         height:100vh;
-        // height: 80%;
         position: absolute;bottom:0;right:0;
         animation: bgImg .5s ease-in .2s;
+        border:0px solid black;
         img{
             width:100%;
             height: 100%;
@@ -303,7 +308,7 @@ header{
         }
 
         p{
-            font-size: 25px;
+            font-size: 20px;
             line-height: 5vh;
             font-style: italic;
             color:var(--norm-cl);
@@ -673,7 +678,7 @@ footer{
     height:8vh;
     text-align: center;
     color:$hover-color;
-    font-size: 25px;
+    font-size: 18px;
     box-shadow: 2px 3px 5px 4px var(--bx-shadow);
     display: flex;
     justify-content: center;

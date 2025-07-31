@@ -18,13 +18,13 @@
   --primary-bg:rgb(10, 10, 10);
   --contact-bg:rgb(30,30,45);
   --norm-bg:black;
-  --bx-shadow: rgb(39,39,39);
+  --bx-shadow: rgb(12,12,12);
   --line: rgb(26,26,0);
 }
 
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -123,7 +123,8 @@ header {
   cursor: pointer;
   z-index: 3;
   width: 60px;
-  height: 8vh;
+  height: 6vh;
+  margin: 5px 0px;
   transition: 0.3s ease-in-out;
   background-color: whitesmoke;
   display: flex;
@@ -138,6 +139,9 @@ header {
 }
 .theme-mode.active {
   display: none;
+}
+.theme-mode > i {
+  font-size: 40px;
 }
 
 .menu-btn {
@@ -252,6 +256,7 @@ header {
   bottom: 0;
   right: 0;
   animation: bgImg 0.5s ease-in 0.2s;
+  border: 0px solid black;
 }
 .intro-img img {
   width: 100%;
@@ -270,7 +275,7 @@ header {
   color: var(--primary-color);
 }
 .about-content p {
-  font-size: 25px;
+  font-size: 20px;
   line-height: 5vh;
   font-style: italic;
   color: var(--norm-cl);
@@ -570,7 +575,7 @@ footer {
   height: 8vh;
   text-align: center;
   color: rgb(128, 128, 128);
-  font-size: 25px;
+  font-size: 18px;
   box-shadow: 2px 3px 5px 4px var(--bx-shadow);
   display: flex;
   justify-content: center;
@@ -788,9 +793,6 @@ footer:hover {
     padding: 0px;
     width: 100%;
   }
-  footer {
-    font-size: 20px;
-  }
 }
 @media screen and (max-width: 550px) {
   header {
@@ -979,9 +981,6 @@ footer:hover {
     padding: 0px;
     width: 100%;
     flex-direction: column;
-  }
-  footer {
-    font-size: 20px;
   }
 }
 @keyframes moving {

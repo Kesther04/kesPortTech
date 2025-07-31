@@ -63,4 +63,4 @@ dlCV.addEventListener('click', () => {
 // for Footer Content
 let footer = document.querySelector('footer');
 let footDate = new Date().getFullYear();
-footer.innerHTML = `&copy; Copyright ${footDate}`;
+footer.innerHTML = `&copy; Copyright ${footDate} | All Rights Reserved`;

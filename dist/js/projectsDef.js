@@ -42,7 +42,7 @@ const fetchedData = (link,type) => {
                 varr.push(i);
             }
 
-            for (let i = 1; i <= 5; i++) {
+            for (let i = 1; i <= 4; i++) {
                 const randomIndex = Math.floor(Math.random()*varr.length)
                 carr.push(varr[randomIndex])
                 varr.splice(randomIndex,1);
