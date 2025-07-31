@@ -63,6 +63,8 @@ header {
   height: 6vh;
   margin: 5px 0;
   cursor: pointer;
+  position: relative;
+  top: 0;
 }
 .logo img {
   width: 100%;
@@ -123,8 +125,9 @@ header {
   cursor: pointer;
   z-index: 3;
   width: 60px;
-  height: 6vh;
-  margin: 5px 0px;
+  height: 100%;
+  position: relative;
+  top: 0px;
   transition: 0.3s ease-in-out;
   background-color: whitesmoke;
   display: flex;
@@ -656,7 +659,6 @@ footer:hover {
     font-size: 18px;
   }
   .theme {
-    position: absolute;
     right: 150px;
   }
   .menu-btn {
