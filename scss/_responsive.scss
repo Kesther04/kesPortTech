@@ -200,12 +200,14 @@ $bodyPad:40px 5px;
         h1{
             font-size: 40px;
         }
+
         
         
 
         &-content{
             width:40%;    
-               
+            box-shadow: 0 0 0 var(--bx-shadow);
+            text-align: center;
         }
     }
 

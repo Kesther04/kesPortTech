@@ -6,6 +6,8 @@
   --primary-bg:whitesmoke;
   --contact-bg:rgb(225, 225, 245);
   --norm-bg:white;
+  --serv-bg:rgb(230, 230, 230);
+  --tr-norm-bg:rgba(255,255,255,0.5);
   --bx-shadow: rgb(216,216,216);
   --line: rgb(229,229,255);
 }
@@ -18,6 +20,8 @@
   --primary-bg:rgb(10, 10, 10);
   --contact-bg:rgb(30,30,45);
   --norm-bg:black;
+  --serv-bg:rgb(25, 25, 25);
+  --tr-norm-bg:rgba(0,0,0,0.5);
   --bx-shadow: rgb(12,12,12);
   --line: rgb(26,26,0);
 }
@@ -366,6 +370,7 @@ header {
   width: 100%;
   height: auto;
   padding: 40px 100px;
+  background-color: var(--serv-bg);
 }
 .services.show {
   animation: move-down 0.5s ease-in;
@@ -384,7 +389,7 @@ header {
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
-  background: var(--norm-bg);
+  background: var(--tr-norm-bg);
   color: var(--norm-cl);
   box-shadow: 2px 3px 5px 4px var(--bx-shadow);
 }
@@ -733,6 +738,8 @@ footer:hover {
   }
   .services-content {
     width: 40%;
+    box-shadow: 0 0 0 var(--bx-shadow);
+    text-align: center;
   }
   .projects {
     width: 100%;
